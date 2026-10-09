@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Metla</string>
+	<key>CFBundleExecutable</key>
+	<string>Metla</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>CFBundleIdentifier</key>
+	<string>local.metla.cleaner</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Metla</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>6</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
+	<key>LSHasLocalizedDisplayName</key>
+	<true/>
+	<key>LSMinimumSystemVersion</key>
+	<string>15.0</string>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>Metla asks Finder to empty the Trash and to move apps there when removing them needs an administrator password.</string>
+	<key>NSDesktopFolderUsageDescription</key>
+	<string>Metla looks on the Desktop for duplicates, large files and files you no longer use.</string>
+	<key>NSDocumentsFolderUsageDescription</key>
+	<string>Metla looks in Documents for duplicates, large files and files you no longer use.</string>
+	<key>NSDownloadsFolderUsageDescription</key>
+	<string>Metla looks in Downloads for installers, duplicates, large files and files you no longer use.</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>NSRemovableVolumesUsageDescription</key>
+	<string>Metla scans the folder you chose on an external drive.</string>
+</dict>
+</plist>

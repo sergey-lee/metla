@@ -1,0 +1,120 @@
+# Generates Metla.xcodeproj: run `xcodegen` after changing this file. Two targets share one source tree:
+#   Metla        Mac App Store build, sandboxed (Scripts/upload.sh)
+#   MetlaDirect  build for download from the website: no sandbox, Developer ID, notarized (Scripts/release_direct.sh)
+# Scripts/build.sh makes a quick local build without Xcode.
+name: Metla
+options:
+  bundleIdPrefix: net.alienminds
+  deploymentTarget:
+    macOS: "15.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "6"
+targets:
+  Metla:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources/Metla
+      - path: Resources/AppIcon.icns
+    info:
+      path: Store/Info.plist
+      properties:
+        CFBundleDevelopmentRegion: en
+        CFBundleName: Metla
+        CFBundleDisplayName: Metla
+        CFBundleIconFile: AppIcon
+        LSHasLocalizedDisplayName: true
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSApplicationCategoryType: public.app-category.utilities
+        LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
+        NSHumanReadableCopyright: "© 2026 Alien Minds"
+        # Only SHA-256 hashing from CryptoKit, to compare file contents: exempt.
+        ITSAppUsesNonExemptEncryption: false
+        NSDesktopFolderUsageDescription: Metla looks on the Desktop for duplicates, large files and files you no longer use.
+        NSDocumentsFolderUsageDescription: Metla looks in Documents for duplicates, large files and files you no longer use.
+        NSDownloadsFolderUsageDescription: Metla looks in Downloads for installers, duplicates, large files and files you no longer use.
+        NSRemovableVolumesUsageDescription: Metla scans the folder you chose on an external drive.
+    entitlements:
+      path: Store/Metla.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.files.user-selected.read-write: true
+        com.apple.security.files.bookmarks.app-scope: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: net.alienminds.metla
+        PRODUCT_NAME: Metla
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: 4GZ4AH8Z6M
+        CODE_SIGN_IDENTITY: "Apple Development"
+        ENABLE_HARDENED_RUNTIME: NO
+        GENERATE_INFOPLIST_FILE: NO
+        ENABLE_USER_SCRIPT_SANDBOXING: NO
+        SWIFT_EMIT_LOC_STRINGS: NO
+    postBuildScripts:
+      - name: Compile translations
+        basedOnDependencyAnalysis: false
+        script: |
+          set -euo pipefail
+          RESOURCES="$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH"
+          mkdir -p "$RESOURCES"
+          xcrun xcstringstool compile "$SRCROOT/Resources/Localizable.xcstrings" --output-directory "$RESOURCES"
+          xcrun xcstringstool compile "$SRCROOT/Resources/InfoPlist.xcstrings" --output-directory "$RESOURCES"
+          cd "$SRCROOT"
+          /usr/bin/python3 Scripts/source_strings.py "$RESOURCES"
+  MetlaDirect:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources/Metla
+      - path: Resources/AppIcon.icns
+    info:
+      path: Store/Direct-Info.plist
+      properties:
+        CFBundleDevelopmentRegion: en
+        CFBundleName: Metla
+        CFBundleDisplayName: Metla
+        CFBundleIconFile: AppIcon
+        LSHasLocalizedDisplayName: true
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSApplicationCategoryType: public.app-category.utilities
+        LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
+        NSHumanReadableCopyright: "© 2026 Alien Minds"
+        NSAppleEventsUsageDescription: Metla asks Finder to empty the Trash and to move apps there when removing them needs an administrator password.
+        NSDesktopFolderUsageDescription: Metla looks on the Desktop for duplicates, large files and files you no longer use.
+        NSDocumentsFolderUsageDescription: Metla looks in Documents for duplicates, large files and files you no longer use.
+        NSDownloadsFolderUsageDescription: Metla looks in Downloads for installers, duplicates, large files and files you no longer use.
+        NSRemovableVolumesUsageDescription: Metla scans the folder you chose on an external drive.
+    entitlements:
+      path: Store/Direct.entitlements
+      properties:
+        # Hardened runtime: needed to ask Finder to empty the Trash.
+        com.apple.security.automation.apple-events: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: net.alienminds.metla
+        PRODUCT_NAME: Metla
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: 4GZ4AH8Z6M
+        CODE_SIGN_IDENTITY: "Apple Development"
+        ENABLE_HARDENED_RUNTIME: YES
+        GENERATE_INFOPLIST_FILE: NO
+        ENABLE_USER_SCRIPT_SANDBOXING: NO
+        SWIFT_EMIT_LOC_STRINGS: NO
+    postBuildScripts:
+      - name: Compile translations
+        basedOnDependencyAnalysis: false
+        script: |
+          set -euo pipefail
+          RESOURCES="$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH"
+          mkdir -p "$RESOURCES"
+          xcrun xcstringstool compile "$SRCROOT/Resources/Localizable.xcstrings" --output-directory "$RESOURCES"
+          xcrun xcstringstool compile "$SRCROOT/Resources/InfoPlist.xcstrings" --output-directory "$RESOURCES"
+          cd "$SRCROOT"
+          /usr/bin/python3 Scripts/source_strings.py "$RESOURCES"

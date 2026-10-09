@@ -1,0 +1,538 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "CFBundleDisplayName": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Метла"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        }
+      }
+    },
+    "CFBundleName": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Метла"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla"
+          }
+        }
+      }
+    },
+    "NSAppleEventsUsageDescription": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يطلب Metla من Finder إفراغ سلة المهملات ونقل التطبيقات التي يتطلب حذفها كلمة سر المسؤول إليها."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla bittet den Finder, den Papierkorb zu leeren und Apps dorthin zu legen, deren Löschen ein Administratorpasswort erfordert."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla asks Finder to empty the Trash and to move apps there when removing them needs an administrator password."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla pide al Finder vaciar la Papelera y mover a ella las apps cuya eliminación requiere contraseña de administrador."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla demande au Finder de vider la Corbeille et d’y placer les apps dont la suppression exige un mot de passe administrateur."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla Finder से ट्रैश ख़ाली करने और उन ऐप को ट्रैश में भेजने को कहता है जिन्हें हटाने के लिए ऐडमिन पासवर्ड चाहिए।"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla chiede al Finder di svuotare il Cestino e di spostarvi le app la cui rimozione richiede la password di amministratore."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MetlaはFinderに、ゴミ箱を空にすることと、削除に管理者パスワードが必要なアプリをゴミ箱に入れることを依頼します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla는 Finder에 휴지통 비우기와, 삭제에 관리자 암호가 필요한 앱을 휴지통으로 옮기는 작업을 요청합니다."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Metla pede ao Finder para esvaziar o Lixo e mover para ele os apps cuja remoção exige senha de administrador."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Метла просит Finder очистить Корзину и переместить в неё приложения, для удаления которых нужен пароль администратора."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla 需要请“访达”清倒废纸篓，并把需要管理员密码才能删除的应用移到废纸篓。"
+          }
+        }
+      }
+    },
+    "NSDesktopFolderUsageDescription": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يبحث Metla في سطح المكتب عن الملفات المكررة والكبيرة وغير المستخدمة منذ مدة."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla sucht auf dem Schreibtisch nach Duplikaten, großen Dateien und lange nicht benutzten Dateien."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla looks on the Desktop for duplicates, large files and files you no longer use."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla busca en el Escritorio duplicados, archivos grandes y archivos que ya no usas."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla cherche sur le Bureau les doublons, les fichiers volumineux et ceux que vous n’utilisez plus."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla डेस्कटॉप में डुप्लिकेट, बड़ी फ़ाइलें और लंबे समय से अप्रयुक्त फ़ाइलें खोजता है।"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla cerca sulla Scrivania duplicati, file grandi e file che non usi più."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metlaはデスクトップで重複ファイル、大きなファイル、長期間未使用のファイルを探します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla는 데스크탑 폴더에서 중복 파일, 큰 파일, 오랫동안 쓰지 않은 파일을 찾습니다."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Metla procura na Mesa duplicatas, arquivos grandes e arquivos que você não usa mais."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Метла ищет на Рабочем столе дубликаты, большие и давно не используемые файлы."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla 会在“桌面”中查找重复文件、大文件和长期未使用的文件。"
+          }
+        }
+      }
+    },
+    "NSDocumentsFolderUsageDescription": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يبحث Metla في المستندات عن الملفات المكررة والكبيرة وغير المستخدمة منذ مدة."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla sucht in „Dokumente“ nach Duplikaten, großen Dateien und lange nicht benutzten Dateien."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla looks in Documents for duplicates, large files and files you no longer use."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla busca en Documentos duplicados, archivos grandes y archivos que ya no usas."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla cherche dans Documents les doublons, les fichiers volumineux et ceux que vous n’utilisez plus."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla दस्तावेज़ में डुप्लिकेट, बड़ी फ़ाइलें और लंबे समय से अप्रयुक्त फ़ाइलें खोजता है।"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla cerca in Documenti duplicati, file grandi e file che non usi più."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metlaは「書類」で重複ファイル、大きなファイル、長期間未使用のファイルを探します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla는 문서 폴더에서 중복 파일, 큰 파일, 오랫동안 쓰지 않은 파일을 찾습니다."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Metla procura em Documentos duplicatas, arquivos grandes e arquivos que você não usa mais."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Метла ищет в Документах дубликаты, большие и давно не используемые файлы."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla 会在“文稿”中查找重复文件、大文件和长期未使用的文件。"
+          }
+        }
+      }
+    },
+    "NSDownloadsFolderUsageDescription": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يبحث Metla في التنزيلات عن الملفات المكررة والكبيرة وغير المستخدمة منذ مدة."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla sucht in „Downloads“ nach Duplikaten, großen Dateien und lange nicht benutzten Dateien."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla looks in Downloads for duplicates, large files and files you no longer use."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla busca en Descargas duplicados, archivos grandes y archivos que ya no usas."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla cherche dans Téléchargements les doublons, les fichiers volumineux et ceux que vous n’utilisez plus."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla डाउनलोड में डुप्लिकेट, बड़ी फ़ाइलें और लंबे समय से अप्रयुक्त फ़ाइलें खोजता है।"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla cerca in Download duplicati, file grandi e file che non usi più."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metlaは「ダウンロード」で重複ファイル、大きなファイル、長期間未使用のファイルを探します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla는 다운로드 폴더에서 중복 파일, 큰 파일, 오랫동안 쓰지 않은 파일을 찾습니다."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Metla procura em Downloads duplicatas, arquivos grandes e arquivos que você não usa mais."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Метла ищет в Загрузках дубликаты, большие и давно не используемые файлы."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla 会在“下载”中查找重复文件、大文件和长期未使用的文件。"
+          }
+        }
+      }
+    },
+    "NSRemovableVolumesUsageDescription": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يفحص Metla المجلد الذي اخترته على قرص خارجي."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla scannt den Ordner, den du auf einem externen Laufwerk gewählt hast."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla scans the folder you chose on an external drive."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla analiza la carpeta que elegiste en un disco externo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla analyse le dossier que vous avez choisi sur un disque externe."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla बाहरी डिस्क पर आपके चुने फ़ोल्डर को स्कैन करता है।"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla analizza la cartella che hai scelto su un disco esterno."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metlaは外付けディスク上で選択したフォルダをスキャンします。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla는 외장 디스크에서 선택한 폴더를 스캔합니다."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Metla analisa a pasta que você escolheu em um disco externo."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Метла сканирует выбранную вами папку на внешнем диске."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metla 会扫描你在外置磁盘上选择的文件夹。"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
