@@ -70,7 +70,7 @@ enum LibraryCatalog {
         }
         name = stripHostIdentifier(stripGroupPrefix(name))
         let lowered = name.lowercased()
-        if systemMarkers.contains(where: { lowered.contains($0) }) { return nil }
+        if systemMarkers.contains(where: { lowered.contains($0) }) || AppleData.owns(name: url.lastPathComponent) { return nil }
 
         let modified = try? url.resourceValues(forKeys: [.contentModificationDateKey]).contentModificationDate
         if isIdentifier(lowered) {
@@ -115,6 +115,11 @@ enum LibraryCatalog {
         let tail = name[name.index(after: dot)...]
         let looksLikeUUID = tail.count == 36 && tail.allSatisfy { $0.isHexDigit || $0 == "-" }
         return looksLikeUUID ? String(name[..<dot]) : name
+    }
+
+    /// Whether a folder name is a reverse-DNS identifier such as "com.vendor.app".
+    static func looksLikeIdentifier(_ name: String) -> Bool {
+        isIdentifier(name.lowercased())
     }
 
     private static func isIdentifier(_ lowered: String) -> Bool {

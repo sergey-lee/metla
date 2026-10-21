@@ -18,7 +18,7 @@ enum LargeFileScanner {
         options.packagesAsItems = true
 
         let found = await FileWalker.collect(root: root, env: env, options: options, progress: progress) { file in
-            file.allocatedSize >= minSize
+            file.allocatedSize >= minSize && !AppleData.owns(path: file.url)
         }
         if Task.isCancelled || found.isEmpty { return [] }
 

@@ -7,8 +7,9 @@ enum JunkScanner {
 
     @concurrent
     static func scan(env: ScanEnvironment, running: RunningSnapshot, progress: ProgressSink) async -> [ItemGroup] {
+        let index = OwnershipIndex(apps: InstalledApps.allKnown(env: env), running: running)
         let steps: [@Sendable () -> ItemGroup?] = [
-            { appCaches(env, running) },
+            { appCaches(env, running, index) },
             { embeddedCaches(env, running) },
             { logs(env) },
             { xcode(env) },
@@ -55,11 +56,17 @@ enum JunkScanner {
         "go-build": (.safe, rebuilt("Go"))
     ]
 
-    private static func appCaches(_ env: ScanEnvironment, _ running: RunningSnapshot) -> ItemGroup? {
+    private static func appCaches(_ env: ScanEnvironment, _ running: RunningSnapshot, _ index: OwnershipIndex) -> ItemGroup? {
         let items = children(env.library.appending(path: "Caches")).compactMap { url -> FoundItem? in
             let name = url.lastPathComponent
-            // Apple's own caches are managed by the system; Xcode's are the exception worth clearing.
-            if name.hasPrefix("com.apple."), !name.hasPrefix("com.apple.dt.") { return nil }
+            // Apple's caches, Xcode's included, can hold sign-in state and are never offered.
+            if AppleData.owns(name: name) { return nil }
+            // A folder with a plain name is listed only when it belongs to an installed app or a known
+            // tool, so unknown system folders are left alone.
+            if !LibraryCatalog.looksLikeIdentifier(name), cacheNotes[name] == nil,
+               !index.ownsName(NameNormalizer.normalize(name)) {
+                return nil
+            }
             let size = DirectorySize.allocated(url)
             guard size >= megabyte else { return nil }
             if running.owns(name) {
@@ -94,7 +101,7 @@ enum JunkScanner {
     private static func embeddedCaches(_ env: ScanEnvironment, _ running: RunningSnapshot) -> ItemGroup? {
         let support = env.library.appending(path: "Application Support")
         var hosts: [(name: String, url: URL)] = children(support)
-            .filter { !$0.lastPathComponent.hasPrefix("com.apple.") }
+            .filter { !AppleData.owns(name: $0.lastPathComponent) }
             .map { ($0.lastPathComponent, $0) }
         hosts += chromiumRoots.map { (URL(filePath: $0).lastPathComponent, support.appending(path: $0)) }
 
@@ -136,6 +143,7 @@ enum JunkScanner {
 
     private static func logs(_ env: ScanEnvironment) -> ItemGroup? {
         let items = children(env.library.appending(path: "Logs")).compactMap { url -> FoundItem? in
+            if AppleData.owns(name: url.lastPathComponent) { return nil }
             let size = DirectorySize.allocated(url)
             guard size >= megabyte else { return nil }
             return FoundItem(

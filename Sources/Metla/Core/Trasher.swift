@@ -40,8 +40,10 @@ enum Trasher {
         return outcome
     }
 
-    /// Guards against ever trashing a top-level system or home folder, whatever a scanner returns.
+    /// Guards against ever trashing a top-level system or home folder, or data that belongs to
+    /// macOS and Apple's apps (Xcode accounts and sessions included), whatever a scanner returns.
     static func isProtected(_ url: URL) -> Bool {
+        if AppleData.owns(path: url) { return true }
         let path = url.standardizedFileURL.path
         let home = Sandbox.realHome.path
         let homeFolders = [

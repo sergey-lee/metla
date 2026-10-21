@@ -50,6 +50,8 @@ The released DMG is signed with a Developer ID and notarized by Apple, so it ope
 - Caches of apps that are running during the scan are not preselected.
 - Leftovers that changed during the last week, or whose developer still has another app installed, are marked "caution" because they may still be in use or shared.
 - iCloud Drive and other cloud storage folders are never scanned, and cloud-only files are never downloaded as a side effect of a scan.
+- Data that belongs to macOS and Apple's apps is never offered and cannot be moved, whatever a scan returns: everything named `com.apple…` in a Library folder (Xcode's caches, accounts and sessions included), the keychains, and Apple's system folders such as GeoServices or CloudKit. The one exception is Mail's copies of opened attachments.
+- A cache folder with a plain name is listed only when it belongs to an installed app or a known tool, so unknown system folders are left alone.
 - System folders and the top-level folders of your home directory can never be moved, whatever a scan returns.
 
 ## Build from source
